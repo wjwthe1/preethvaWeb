@@ -8,5 +8,11 @@ html {
     background-color: white;
 
 }
+//Important order!
+@import "sass/variables";
+@import "sass/container";
+@import "sass/image";
+@import "sass/typography";
+
 
 @import "sass/nav";

@@ -6,17 +6,17 @@ html
 	head
 		meta(name="viewport" content="width=device-width,initial-scale=1")
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-		//- link(href="css/index.css" rel="stylesheet" )
+		link(href="css/index.css" rel="stylesheet")
 		title= title
 		link(href="https://fonts.googleapis.com/css?family=Crimson+Text|Lora|PT+Sans|Roboto" rel="stylesheet")
 	body
 		//- script(src="js/bundle.js")
 		
+		.container
+			header(class="header")
+				include ../partials/nav
+			main(class="main")
+				//- include ../mixins/panel-center
 
-		header(class="header")
-			include ../partials/nav
-		main(class="main")
-			//- include ../mixins/panel-center
-
-			//- include ../partials/hero-panel
-			//- include ../partials/footer
+				//- include ../partials/hero-panel
+				//- include ../partials/footer

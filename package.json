@@ -15,7 +15,7 @@
     "watch-js": "gaze \"yarn ugly-js\" \"scr/js/*.*\"",
     "watch-pug": "yarn pug -- -w",
     "watch-css": "yarn css -- -w",
-    "watch": "concurrently -k \"yarn watch-pug\" \"yarn watch-css\" \"yarn watch-js\" \"yarn watch-static\"",
+    "watch": "concurrently -k \"yarn watch-js\" \"yarn watch-static\" \"yarn watch-pug\" \"yarn watch-css\" ",
     "createfolders": "mkdirp build/js build/css build/assets",
     "build": "yarn createfolders && yarn css && npm run pug && yarn ugly-js && yarn static",
     "release": "npm run autoprefixer && npm run ugly-js"

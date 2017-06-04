@@ -1,0 +1,38 @@
+{
+  "name": "preethva",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "index.js",
+  "scripts": {
+    "autoprefixer": "postcss build/css/index.css -c ./postcss.config.js -r",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pug": "pug scr/pug/public --out build",
+    "css": "node-sass scr/scss -o build/css --output-style compressed",
+    "static": "copyfiles -u 1 scr/assets/*.* build/",
+    "ugly-js": "uglifyjs scr/js/*.* -c -m -o build/js/main.js",
+    "js": "copyfiles -u 1 scr/js/*.* build",
+    "watch-static": "gaze \"yarn static\" \"scr/assets/*.*\"",
+    "watch-js": "gaze \"yarn ugly-js\" \"scr/js/*.*\"",
+    "watch-pug": "yarn pug -- -w",
+    "watch-css": "yarn css -- -w",
+    "watch": "concurrently -k \"yarn watch-pug\" \"yarn watch-css\" \"yarn watch-js\" \"yarn watch-static\"",
+    "createfolders": "mkdirp build/js build/css build/assets",
+    "build": "yarn createfolders && yarn css && npm run pug && yarn ugly-js && yarn static",
+    "release": "npm run autoprefixer && npm run ugly-js"
+  },
+  "author": "william wright",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^7.1.1",
+    "concurrently": "^3.4.0",
+    "copyfiles": "^1.2.0",
+    "gaze-cli": "^0.2.0",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.3",
+    "pug": "^2.0.0-rc.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^0.5.0",
+    "uglify-js": "^3.0.15",
+    "zenscroll": "^4.0.0"
+  }
+}

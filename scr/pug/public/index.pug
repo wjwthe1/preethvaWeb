@@ -1,4 +1,4 @@
-- const title = "Will Forme"
+- const title = "Preethva Burman"
 - const headerTitle = "Your website designed."
 
 doctype html
@@ -11,11 +11,14 @@ html
 		link(href="https://fonts.googleapis.com/css?family=PT+Serif|Raleway" rel="stylesheet")
 	body
 		//- script(src="js/bundle.js")
-		
 		header(class="header")
-			include ../partials/nav
+			include ../mixins/image
+			include ../mixins/header-text
+			include ../mixins/button
 		main(class="main")
-			//- include ../mixins/panel-center
 
-			//- include ../partials/hero-panel
-			//- include ../partials/footer
+			include ../partials/hero
+			include ../partials/why
+			include ../partials/temp
+			include ../partials/nav
+			

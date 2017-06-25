@@ -1,0 +1,53 @@
+.hero {
+	height: 1100px;
+	@media only screen and (max-width: $tablet) {
+		height: 960px;
+	}
+	@media only screen and (max-width: $mobile) {
+		height: 600px;
+	}
+	&__header {
+		color: $lightBlue;
+		position: relative;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		@media only screen and (max-width: $tablet) {
+			font-size: 36px;
+			line-height: 38px;
+			max-width: 340px;
+		}
+		@media only screen and (max-width: $mobile) {
+			top: 45%;
+			font-size: 50px;
+			line-height: 50px;
+			max-width: 270px;
+		}
+		margin: 0;
+		max-width: 500px;
+		font-size: 54px;
+		line-height: 57px;
+		letter-spacing: 0em;
+	}
+	&__header-text{
+		margin: 0;
+		padding: 0;
+		line-height: 50px;
+		&--small{
+			@media only screen and (max-width: $tablet) {
+				font-size: 24px;
+				line-height: 38px;
+				padding-top: 40px;
+			}
+			@media only screen and (max-width: $mobile) {
+				
+				font-size: 24px;
+				line-height: 40px;
+				padding-top: 25px;
+			}
+			padding-top: 50px;
+			font-size: 50px;
+		}
+	}
+}

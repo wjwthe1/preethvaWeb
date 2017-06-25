@@ -1,0 +1,6 @@
+mixin logo(logoClass)
+	- var imageSrc = 'assets/logo.png'
+	- var imageClass = ''
+	- var href = 'index.html'
+	div(class="logo "+logoClass)
+		+image(imageSrc, imageClass, href)

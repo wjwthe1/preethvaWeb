@@ -3,7 +3,8 @@ html {
         margin: 0px;
     }
     color: black;
-    background-color: white;
+    
+	background-color: #3b434e;
 
 }
 //Important order!
@@ -12,5 +13,9 @@ html {
 @import "sass/image";
 @import "sass/typography";
 
-
+@import "sass/button";
+@import "sass/background";
+@import "sass/background-image";
 @import "sass/nav";
+@import "sass/hero";
+@import "sass/panel";

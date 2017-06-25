@@ -1,0 +1,10 @@
+mixin header-text(header, text, headerClass, textClass, mainModify)
+	if !headerClass
+		- var headerClass = ''
+	if !textClass
+		- var textClass = ''
+	if !mainModify
+		- var mainModify = ''
+	div(class="header-text "+mainModify)
+		p(class=""+headerClass)!= header
+		p(class=""+textClass)!=text

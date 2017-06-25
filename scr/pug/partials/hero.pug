@@ -1,0 +1,18 @@
+- var imageScr = 'assets/accounting.jpg'
+- var imageClass = 'background-image'
+- var header = 'Preethva Burman'
+- var text = 'Accountant'
+- var headerClass = 'hero__header-text'
+- var textClass = 'hero__header-text hero__header-text--small'
+
+- var href = '#'
+- var btnText = 'Find out more' 
+- var btnClass = ''
+.background-image__overlay
++image(imageScr, imageClass)
+.container
+	.hero
+		.hero__header
+			+header-text(header, text, headerClass ,textClass)
+
+			+button(btnClass, href, btnText)

@@ -1,0 +1,5 @@
+mixin button(btnClass, href, btnText)
+	if !btnClass
+		a(class="button" href=href) #{btnText}
+	if btnClass
+		a(class="button "+btnClass href=href) #{btnText}

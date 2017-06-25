@@ -1,45 +1,37 @@
 .nav {
-    position: absolute;
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	z-index: 10;
-    top: 0;
-	height: 90px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	&__list {
+		@media only screen and (max-width: $tablet) {
+			flex-direction: column;
+			display: block;
+			li{
+				margin: 0 auto;
+			}
+		}
+
 		list-style: none;
 		display: flex;
 		padding: 0;
 		margin: 0;
-		margin-top: 30px;
+		justify-content: center;
 		li {
 			padding: 0;
+			display: table;
 		}
 	}
 
 	&__link{
-        padding: 0 35px;
-        letter-spacing: 0.2em;
-        line-height: 25px;
-		color: black;
+		padding: 0 35px;
+		letter-spacing: 0.2em;
+		line-height: 25px;
+		color: $lightBlue;
 		text-transform: uppercase;
 		text-decoration: none;
 		font-size: 12px;
 		font-weight: 600;
 		&:hover {
 			color: grey;
-			img {
-				opacity: 0.6;
-			}
 		}
 	}
-	
-
-	&__share {
-        display: none;
-        position: relative;
-        &--margin {
-            margin-left: 10px;
-        }
-    }
 }

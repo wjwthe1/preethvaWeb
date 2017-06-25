@@ -11,11 +11,10 @@
     "static": "copyfiles -u 1 scr/assets/*.* build/",
     "ugly-js": "uglifyjs scr/js/*.* -c -m -o build/js/main.js",
     "js": "copyfiles -u 1 scr/js/*.* build",
-    "watch-static": "gaze \"yarn static\" \"scr/assets/*.*\"",
     "watch-js": "gaze \"yarn ugly-js\" \"scr/js/*.*\"",
     "watch-pug": "yarn pug -- -w",
     "watch-css": "yarn css -- -w",
-    "watch": "concurrently -k \"yarn watch-js\" \"yarn watch-static\" \"yarn watch-pug\" \"yarn watch-css\" ",
+    "watch": "concurrently -k \"yarn watch-css\" \"yarn watch-pug\"  ",
     "createfolders": "mkdirp build/js build/css build/assets",
     "build": "yarn createfolders && yarn css && npm run pug && yarn ugly-js && yarn static",
     "release": "npm run autoprefixer && npm run ugly-js"

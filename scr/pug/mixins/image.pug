@@ -1,0 +1,8 @@
+mixin image(imageScr, imageClass, href)
+	if !href
+		a(class=""+imageClass)
+			img(src=imageScr alt="Oh no! Image had problems...")
+
+	if href
+		a(class=""+imageClass href=""+href)
+			img(src=imageScr alt="No image, oh no.") 
